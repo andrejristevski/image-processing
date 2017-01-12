@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>cnvs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+html, body {
+	
+	
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#renderCanvas {
+	width: 100%;
+	height: 100%;
+	touch-action: none;
+}
+
+div.buttons {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	margin: 0 0 0 0;
+}
+</style>
+
+
+</head>
+<body>
+	<p>Canvas:</p>
+	<canvas id="myCanvas" width="500" height="500"
+		style="border: 1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+	<canvas id="secondCanvas" width="500" height="500"
+		style="border: 1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+
+
+	<!-- The following DIV contains controls that demonstrate interaction with the IREApp object -->
+	<div id="desktopDebugPanel" class="buttons">
+		<h2>Actions</h2>
+		<br>
+		<button type="button" onclick="blurImage()">Blur ALl!</button>
+		<br>
+		<button type="button" onclick="saveLocaly()">Save Me!</button>
+		<br>
+		<button type="button" onclick="revertImage()">revertImage</button>
+		<br>
+		<button type="button" onclick="negateImage()">Negate</button>
+		<br>
+		<button type="button" onclick="restoreCanvas()">RestoreCanvas</button>
+		<br>
+		<button type="button" onclick="initRotation()">Rotate</button>
+		<br>
+		<button type="button" onclick="greyScaleImage()">GreyScale</button>
+		<br>
+		<button type="button" onclick="saveCanvas()">SaveCanvas</button>
+		<br>
+		<button type="button" onclick="contrastImage()">Contrast</button>
+		<br>
+		<button type="button" onclick="applyTool()">ApplyTool!</button>
+		<br>
+		<button type="button" onclick="increaseBrightness()">Increase
+			Brightness!</button>
+		<br>
+		<button type="button" onclick="decreaseBrightness()">Decrease
+			Brightness</button>
+		<br>
+		<button type="button" onclick="sharpenImage()">Sharpen</button>
+		<br>
+		<button type="button" onclick="redrawFirst()">RepaintFirstCan</button>
+		<br>
+		<!--
+		<button type="button" onclick="oneArgumentFunc()">one arg!</button>
+		<br><button type="button" onclick="twoArgumentFunc()">two args!</button>
+		<br>
+		<!--  <button type="button" onclick="redrawFirst()">repaintFirstCan</button>-->
+		<br> <br> <br /> Slider <br /> <input id="slider"
+			type="range" min="0" max="180" value="0" step="1"
+			oninput="sliderChanged(this.value);document.getElementById('sliderValueLabel').innerHTML = value;" />
+		<label id="thicknessSliderLabel">&nbsp;</label>
+		<h4>
+			<label id="sliderValueLabel1">sliderValue:</label>
+		</h4>
+		<label id="sliderValueLabel"></label> <br> <br>
+		<div id="considerAddOperations" class="additionalOperations">
+
+			Draw <input onchange="changedRad()" type="radio" id="drawRad"
+				name="options" value="male"> <br> Crop <input
+				onchange="changedRad()" type="radio" id="cropRad" name="options"
+				value="female"><br>Blur <input
+				onchange="changedRad()" type="radio" id="blurRad" name="options"
+				value="other"> <br> Neither <input
+				onchange="changedRad()" type="radio" id="neitherRad" name="options"
+				value="other" checked="checked">
+
+		</div>
+
+
+		<script type="text/javascript" src="js/tools/ToolsPalette.js"></script>
+		<script type="text/javascript" src="js/tools/BlurTool.js"></script>
+		<script type="text/javascript" src="js/ModelState.js"></script>
+		<script type="text/javascript" src="js/ActionsController.js"></script>
+		<script type="text/javascript" src="js/tools/Tools.js"></script>
+		<script type="text/javascript" src="js/tools/CroppingTool.js"></script>
+		<script type="text/javascript" src="js/Point.js"></script>
+		<script type="text/javascript" src="js/Globals.js"></script>
+		<script type="text/javascript" src="js/paper-full.js"></script>
+		<script type="text/javascript" src="js/tools/DrawTool.js"></script>
+		<script type="text/javascript" src="js/Kernels.js"></script>
+		<script type="text/javascript" src="js/Pixel.js"></script>
+		<script type="text/javascript" src="js/Filters.js"></script>
+		<script type="text/javascript" src="js/ImageUtils.js"></script>
+		<script type="text/javascript" src="js/Initializator.js"></script>
+
+
+		<script>
+			window.onload = function() {
+				// Get a reference to the canvas object
+				var canvas = document.getElementById('secondCanvas');
+				// Create an empty project and a view for the canvas:
+				paper.setup(canvas);
+				// Create a Paper.js Path to draw a line into it:
+
+			}
+			init();
+		</script>
+</body>
+</html>
