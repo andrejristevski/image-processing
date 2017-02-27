@@ -2,7 +2,7 @@ Install node.js
 
 Go to the directory with package.json file.
 
-npm install
-npm start 
+1. npm install
+2. npm start 
 
 Go to localhost:8080 in yout browser
