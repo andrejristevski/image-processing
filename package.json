@@ -1,0 +1,24 @@
+{
+  "name": "image-processing",
+  "version": "1.0.0",
+  "description": "Image processing playground",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrejristevski/image-processing.git"
+  },
+  "keywords": [
+    "javasacript",
+    "image-processing",
+    "filters",
+    "html5"
+  ],
+  "author": "Andrej Ristevski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrejristevski/image-processing/issues"
+  }
+}
