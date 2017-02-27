@@ -1,3 +1,8 @@
 Install node.js
 
-To start the server , navigate to the directory with server.js file and type "node server.js" in terminal .
+Go to the directory with package.json file.
+
+npm install
+npm start 
+
+Go to localhost:8080 in yout browser
